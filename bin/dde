@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+if [ "$#" -eq 0 ]; then
+  printf "dde -- Enter a running container by container name.\n\
+Usage: dde CONTAINER_NAME\n"
+fi
+
+if [ "$#" -eq 1 ]; then
+  docker exec -it $1 bash
+fi
+
